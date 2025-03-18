@@ -2,9 +2,12 @@ from collections import deque
 
 def solution(bridge_length, weight, truck_weights):
     answer = 0
-    Q = deque()
-    
+    Q = deque(truck_weights)
+    now_truck, now_count = 0, 0
     while Q:
+        now_truck = Q.popleft()
+        now_weight += now_truck
+        now_count += now_truck
     return answer
 
 if __name__=="__main__":
